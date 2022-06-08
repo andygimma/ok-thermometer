@@ -10,6 +10,7 @@ import {
 import { MOODS } from "../utils";
 import "./ThermometerFace.css";
 function ThermometerFace(props) {
+  
   const { mood } = props;
   switch (mood) {
     case MOODS[0]:
