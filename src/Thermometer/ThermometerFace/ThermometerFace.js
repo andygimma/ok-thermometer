@@ -10,7 +10,7 @@ import {
 import { MOODS } from "../utils";
 import "./ThermometerFace.css";
 function ThermometerFace(props) {
-  const { mood } = props;
+  const { mood } = props; // eslint-disable-line prop-types
   switch (mood) {
     case MOODS[0]:
       return <BsEmojiAngry className="App-smiley" />;
