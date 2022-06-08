@@ -17,7 +17,9 @@ function Thermometer() {
     )
       .then(res => res.json())
       .then(response => {
+        console.log(response[0].label)
         setMood(response[0].label)
+       
         // NOTE
         // I can't reach the server because of a CORS error so I can't test this.
         // In production, I 
@@ -41,7 +43,6 @@ function Thermometer() {
   );
 
   function updateMood(mood) {
-
     setMood(mood)
   }
 }
