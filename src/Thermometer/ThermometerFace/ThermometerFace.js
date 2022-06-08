@@ -10,7 +10,7 @@ import {
 import { MOODS } from "../utils";
 import "./ThermometerFace.css";
 function ThermometerFace(props) {
-  const { mood } = props; // eslint-disable-line prop-types
+  const { mood } = props;
   switch (mood) {
     case MOODS[0]:
       return <BsEmojiAngry className="App-smiley" />;
@@ -27,7 +27,7 @@ function ThermometerFace(props) {
   }
 }
 
-ThermometerFace.PropTypes = {
+ThermometerFace.propTypes = {
   mood: PropTypes.string
 }
 
