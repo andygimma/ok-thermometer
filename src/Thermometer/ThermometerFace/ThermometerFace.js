@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import {
   BsEmojiNeutral,
   BsEmojiFrown,
@@ -8,8 +9,8 @@ import {
 } from "react-icons/bs";
 import { MOODS } from "../utils";
 import "./ThermometerFace.css";
-
-function ThermometerFace({ mood }) {
+function ThermometerFace(props) {
+  const { mood } = props;
   switch (mood) {
     case MOODS[0]:
       return <BsEmojiAngry className="App-smiley" />;
@@ -24,6 +25,10 @@ function ThermometerFace({ mood }) {
     default:
       return <BsEmojiNeutral className="App-smiley" />;
   }
+}
+
+ThermometerFace.PropTypes = {
+  mood: PropTypes.string
 }
 
 export default ThermometerFace;
